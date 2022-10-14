@@ -1,0 +1,23 @@
+@font-face {
+    font-family:personalfont;
+    src: url(../fonts/ufonts.com_tw-cen-mt.ttf);
+  }
+ body {
+    font-family: personalfont;
+ }
+  
+  #menu {
+    height: 0;
+    overflow: hidden;
+    transition: all 1s;
+}
+#menu li{
+    list-style-type: none;
+}
+input[type="checkbox"]:checked + #menu {
+    height: 300px;
+}
+
+#icon {
+    display: none;
+}
