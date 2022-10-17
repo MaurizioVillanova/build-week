@@ -114,8 +114,10 @@ span {
 }
 
 #aboutus hr {
-    margin-right: 200px;
-    margin-left: 200px;
+    width: 35%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     color: lightgray;
 }
 
@@ -124,6 +126,8 @@ span {
     font-size: 16px;
     line-height: 26px;
 }
+
+/* blog */
 
 #blog {
     background-image: url(../images/blog/blog-bg.jpg);
@@ -166,12 +170,10 @@ span {
     border-color: white;
 }
 
-
 #containerblog hr {
     margin-top: 20px;
     margin-bottom: 20px;
     color: lightgray;
-
 }
 
 #normal {
@@ -188,7 +190,6 @@ span {
     margin-bottom: 50px;
     float: left;
     margin-left: 2.5%;
-
 }
 
 .button a {
@@ -199,10 +200,10 @@ span {
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
-    font-family: 'personalFont';
 }
 
-/* MENU     */
+/* menu */
+
 #titlemenu {
     text-align: center;
     padding-top: 70px;
@@ -222,40 +223,167 @@ span {
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-  border-top: none;
-  border-bottom: 1px solid lightgray;
-    
+    border-top: none;
+    border-bottom: 1px solid lightgray;
+
 }
-#feat
-{
+
+#feat {
     margin-left: 15px;
     margin-right: 15px;
 }
+
 #feat h3 {
     margin-bottom: 30px;
 }
+
 #feat div {
     margin-bottom: 30px;
-    
+
 }
+
 #feat p {
     padding: 6px 0;
     color: #949494;
 }
- #feat span{
+
+#feat div span {
     color: #938463;
     font-size: 14px;
 }
 
 .button2 a {
-    background:transparent ;
+    background: transparent;
     padding: 25px 85px;
-    color:#ff530a;
-    border:2px solid#ff530a;
+    color: #ff530a;
+    border: 2px solid#ff530a;
     text-decoration: none;
     float: right;
     margin-right: 2.5%;
 }
+
 #listamenu {
     padding-bottom: 125px;
 }
+
+/* newsletter */
+
+#news {
+    background-image: url(../images/subscribe-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    padding-bottom: 200px;
+    padding-top: 80px;
+    color: white;
+}
+
+#news hr {
+    width: 35%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: lightgray;
+    border-top: none;
+}
+
+#news h1 {
+    font-size: 30px;
+}
+
+#news p {
+    font-size: 18px;
+    padding: 25px 0;
+}
+
+#news input {
+    padding: 6px 12px;
+    width: 95%;
+    margin: auto;
+    height: 65px;
+}
+
+.button3 {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    float: left;
+    margin-left: 2.5%;
+}
+
+.button3 a {
+    padding: 28px 85px;
+    background-color: #7EC3BB;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* contatti */
+
+#contatti {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#contatti hr {
+    width: 35%;
+    margin: auto;
+    color: gray;
+    border-top: none;
+}
+
+#contatti h1 {
+    font-size: 22px;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#align {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+#contatti h3 {
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.form {
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    width: 100%;
+    height: 48px;
+    border: 1px solid lightgray;
+}
+
+input::placeholder {
+    color: lightgray;
+    font-family: 'personalFont';
+}
+
+#higher {
+    height: 140px;
+}
+
+.button4 {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.button4 a {
+    text-align: center;
+    padding: 20px 80px;
+    background-color: #FF5333;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+}
+
+/* FOOTER */
