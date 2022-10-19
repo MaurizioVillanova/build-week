@@ -37,6 +37,7 @@ header::before {
     padding: 15px 15px;
     margin-left: 15px;
     margin-right: 15px;
+    z-index: 999;
 }
 
 #icon {
@@ -92,15 +93,59 @@ span {
     color: #FF5333;
     font-size: 24px;
 }
-
-#picture {
-    margin-top: 20px;
-    padding: 0 0 50px;
-    display: flex;
-    flex-direction: row;
-    overflow-x: scroll;
+.slider-container{
+    width: 575px;
+    height: 390px;
+    padding:50px 15px;
+    overflow: hidden;
+    text-align: center;
 }
+#picture {
+      width: 2184;  
+       height: 180px ;
+       display: flex;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        -webkit-transition: left 2s;
+        -moz-transition: left 2s;
+        -o-transition: left 2s;
+        transition: left 2s;
+}
+#slider-image-1:target ~ #picture{
+   left: 0px;
+}
+#slider-image-2:target ~ #picture
+{
+   left: -546px;
+}
+#slider-image-3:target ~ #picture
+{
+   left: -1092px;
+}
+#slider-image-4:target ~ #picture
+{
+   left: -1638px;
+}
+.slider-image {
+    width: 273px;
+    height: 220px;
+}
+.slider-change
+{
+	display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:#DADADA;
+}
+.contenitore{
+    width: 546px;
+    overflow: hidden;
 
+}
 /* about us */
 
 #aboutus {
@@ -416,18 +461,18 @@ footer h4 {
     font-size: 18px;
 }
 
-#footerpic li
-{
+#footerpic li {
     list-style-type: none;
     display: inline-block;
     margin-right: 20px;
 }
-#sociallist li 
-{
+
+#sociallist li {
     list-style-type: none;
     display: inline-block;
-    margin-right:10px;
+    margin-right: 10px;
 }
+
 #social h3 {
     margin-bottom: 5px;
 }
@@ -456,6 +501,7 @@ footer h4 {
     text-decoration: none;
     font-size: 16px;
 }
+
 #sociallist .fas {
     padding: 10px;
     display: block;
@@ -463,14 +509,28 @@ footer h4 {
     font-size: 20px;
     background: #B0B0B0;
     color: #FFFFFF;
-    border-radius: 100%; 
+    border-radius: 100%;
 }
+
 #sociallist a {
     text-decoration: none;
     width: 40px;
     height: 40px;
-
 }
+/* ANIMATIONS */
+.post{
+    overflow: hidden;
+}
+.post img:hover {
+    transform: rotate(10deg) scale(1.3);
+    transition:2s;
+}
+   .post img{
+    transition: transform 1s ease-in-out;
+   }
+
+    
+
 
 /* MEDIA QUERIES */
 /*MIN WIDTH 768 */
@@ -508,7 +568,7 @@ footer h4 {
         min-height: 243px;
     }
 
-     h1 {
+    h1 {
         font-size: 36px;
         font-weight: normal;
     }
@@ -522,7 +582,7 @@ footer h4 {
     #listamenu,
     #news,
     #contatti,
-    #containerfooter  {
+    #containerfooter {
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -576,7 +636,7 @@ footer h4 {
         transform: rotate(45deg);
     }
 
-    
+
     .border {
         position: absolute;
         top: 5px;
@@ -600,7 +660,7 @@ footer h4 {
     .items h2 {
         position: relative;
         display: inline-block;
-        z-index: 999;
+        z-index: 99;
         background-color: #fff;
     }
 
@@ -623,98 +683,141 @@ footer h4 {
         margin-top: 25px;
         padding: 0;
     }
-   
+
     .button4 {
         width: 75%;
-       margin: auto;
+        margin: auto;
         margin-top: 20px;
     }
+
     .button4 a {
         padding-top: 15px;
         padding-bottom: 15px;
         font-weight: bold;
     }
+
     .info2 {
         display: flex;
-        justify-content:space-between;
+        justify-content: space-between;
     }
-    
+
 }
+
 @media screen and (min-width:992px) {
     #picture img {
         margin-right: 30px;
         min-width: 185px;
         min-height: 147.46px;
     }
-    #picture{
+
+    #picture {
         padding-left: 40px;
         padding-right: 40px;
 
     }
+
     #containerblog {
         display: grid;
         grid-template-columns: 25% 25% 25% 25%
     }
+
     .space {
         padding: 40px 35px 23px;
-        z-index: 999;
+        z-index: 99;
         background: white;
-     
+
     }
+
     .left::after {
         top: 45%;
-    
+
     }
-    .right::after  {
+
+    .right::after {
         top: 45%
     }
+
     .post {
         min-width: 293px;
         min-height: 220px;
     }
+
     .type2 {
         min-width: 228px;
-        min-height:176px ;
+        min-height: 176px;
     }
-    .button{
+
+    .button {
         float: right;
         margin-top: 25px;
         margin-right: 24px;
     }
+
     #blog {
         padding-bottom: 150px;
     }
+
     .button4 {
         float: right;
         width: 55%;
     }
+
     #contatti {
         padding-bottom: 100px;
     }
+
     .info2 {
         display: block;
     }
-    #containerfooter{
+
+    #containerfooter {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 30px;
         padding-left: 27px;
         padding-right: 27px;
-      
+
     }
+
     footer div {
         margin-left: 10px;
 
     }
+
     footer {
         padding-top: 80px;
     }
+
     #diritti {
         padding-left: 0;
         padding-right: 0;
-    
+
     }
-    
+}
 
+@media (min-width:1200px) {
+    #bloccoheader{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
+    #scorrifoto, #aboutus div, #containerblog, #listamenu, #news > div, #contatti > div, #containerfooter {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #blog {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .button {
+        margin-right: 10%;
+    }
+
+    .form1 {
+        width: 50%;
+    }
 }
