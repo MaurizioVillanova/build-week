@@ -704,6 +704,18 @@ footer h4 {
 }
 
 @media screen and (min-width:992px) {
+    #bloccoheader{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #scorrifoto, #aboutus div, #containerblog, #listamenu, #news > div, #contatti > div, #containerfooter {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     #picture img {
         margin-right: 30px;
         min-width: 185px;
@@ -796,18 +808,7 @@ footer h4 {
 }
 
 @media (min-width:1200px) {
-    #bloccoheader{
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #scorrifoto, #aboutus div, #containerblog, #listamenu, #news > div, #contatti > div, #containerfooter {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
+  
     #blog {
         padding-left: 0;
         padding-right: 0;
