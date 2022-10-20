@@ -82,10 +82,16 @@ input[type="checkbox"]:checked+#menu {
 
 #scorrifoto {
     margin: 50px 0px;
+    padding: 0 15px;
 }
 
-#scorrifoto {
-    padding: 0 15px;
+#scorrifoto i {
+    position: relative;
+    float: right;
+    top: -25px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #C9C9C9;
 }
 
 h3 {
@@ -97,26 +103,27 @@ span {
     font-size: 24px;
 }
 
+#scorrifoto div span {
+    position: fixed;
+}
+
 .slider-container {
     width: 100%;
-    height: 250px;
+    height: auto;
+    margin: auto;
     padding: 25px 15px;
     overflow: hidden;
     text-align: center;
 }
 
 #picture {
-    width: 2184;
-    height: 180px;
+    width: 100%;
+    height: auto;
     display: flex;
     margin-top: 30px;
     margin-bottom: 50px;
     text-align: center;
-    overflow: hidden;
     position: relative;
-    -webkit-transition: left 2s;
-    -moz-transition: left 2s;
-    -o-transition: left 2s;
     transition: left 2s;
 }
 
@@ -125,20 +132,20 @@ span {
 }
 
 #slider-image-2:target~#picture {
-    left: -546px;
+    left: -103%;
 }
 
 #slider-image-3:target~#picture {
-    left: -1092px;
+    left: -203%;
 }
 
 #slider-image-4:target~#picture {
-    left: -1638px;
+    left: -303%;
 }
 
 .slider-image {
-    min-width: 273px;
-    min-height: 220px;
+    min-width: 50%;
+    min-height: 50%;
 }
 
 .slider-change {
@@ -206,6 +213,7 @@ span {
     background-color: white;
     width: 95%;
     margin: auto;
+    overflow: hidden;
 }
 
 .post {
@@ -441,6 +449,7 @@ input::placeholder {
 }
 
 /* FOOTER */
+
 footer div {
     margin-left: 2.5%;
     margin-right: 2.5%;
@@ -528,6 +537,146 @@ footer h4 {
 }
 
 /* ANIMATIONS */
+
+@keyframes downup {
+    0% {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#scorrifoto,
+#aboutus div,
+#feat div,
+.anime {
+    animation: downup 2s;
+}
+
+@keyframes postin {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.post {
+    animation: postin 3s;
+}
+
+@keyframes spacein {
+    0% {
+        opacity: 0;
+        transform: translateX(600px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.space {
+    animation: spacein 3s;
+}
+
+@keyframes button {
+    0% {
+        opacity: 1;
+        transform: scale(0.5);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(0.8);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(0.6);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.button,
+.button4 {
+    animation: button 2s;
+}
+
+@keyframes updown {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.uno {
+    animation: updown 3s;
+}
+
+.due {
+    animation: updown 3s;
+    animation-delay: 0.1s;
+}
+
+.tre {
+    animation: updown 3s;
+    animation-delay: 0.2s;
+}
+
+@keyframes footer {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#info {
+    animation: footer 3s;
+}
+
+#blogpost {
+    animation: footer 3s;
+    animation-delay: 0.1s;
+}
+
+#photostream,
+#social {
+    animation: footer 3s;
+    animation-delay: 0.2s;
+}
+
 .post {
     overflow: hidden;
 }
@@ -542,10 +691,10 @@ footer h4 {
 }
 
 
-
-
 /* MEDIA QUERIES */
+
 /*MIN WIDTH 768 */
+
 @media screen and (min-width:768px) {
 
     #icon,
@@ -559,6 +708,7 @@ footer h4 {
         align-items: baseline;
         height: 55px;
         margin-top: -85px;
+        width: 88%;
     }
 
     #menu {
@@ -570,17 +720,31 @@ footer h4 {
         margin-right: 20px;
     }
 
-
     #scorrifoto {
         margin: 50px 35px;
     }
 
-    .slider-image {
-        margin-right: 25px;
-        min-width: 315px;
-        min-height: 243px;
+    #slider-image-1:target~#picture {
+        left: 0px;
     }
 
+    #slider-image-2:target~#picture {
+        left: -100%;
+    }
+
+    #slider-image-3:target~#picture {
+        left: -168%;
+    }
+
+    #buttonSlide4 {
+        display: none;
+    }
+
+    .slider-image {
+        min-width: 30%;
+        min-height: 30%;
+        padding: 10px;
+    }
 
     h1 {
         font-size: 36px;
@@ -650,7 +814,6 @@ footer h4 {
         transform: rotate(45deg);
     }
 
-
     .border {
         position: absolute;
         top: 5px;
@@ -664,7 +827,6 @@ footer h4 {
         display: flex;
         justify-content: space-between;
         position: relative;
-
     }
 
     #feat div {
@@ -714,12 +876,13 @@ footer h4 {
         display: flex;
         justify-content: space-between;
     }
-
 }
+
+/* MIN-WIDTH 992px */
 
 @media screen and (min-width:992px) {
     #bloccoheader {
-        width: 80%;
+        width: 75%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -735,12 +898,55 @@ footer h4 {
         margin-left: auto;
         margin-right: auto;
     }
-   
-  
+
+    #scorrifoto {
+        margin: auto 35px;
+        width: 90%;
+
+    }
+
+    #scorrifoto h3 {
+        margin-left: 5%;
+        margin-top: 60px;
+    }
+
+    .slider-container {
+        width: 100%;
+        padding-top: 0;
+        margin: 0;
+    }
+
+    .contenitore {
+        width: 100%;
+        margin: auto;
+    }
+
+    #slider-image-1:target~#picture {
+        left: 0px;
+    }
+
+    #slider-image-2:target~#picture {
+        left: -100%;
+    }
+
+    #slider-image-3:target~#picture {
+        left: -168%;
+    }
+
+    #buttonSlide4 {
+        display: none;
+    }
+
     .slider-image {
-      
-        min-width: 187px;
-        min-height: 147px;
+        min-width: 25%;
+        min-height: 25%;
+        padding: 20px;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    #photo1 {
+        margin-left: -10%;
     }
 
     .change {
@@ -756,12 +962,10 @@ footer h4 {
         padding: 40px 35px 23px;
         z-index: 99;
         background: white;
-
     }
 
     .left::after {
         top: 45%;
-
     }
 
     .right::after {
@@ -782,6 +986,7 @@ footer h4 {
         float: right;
         margin-top: 25px;
         margin-right: 24px;
+        margin-right: 10%;
     }
 
     #blog {
@@ -812,7 +1017,6 @@ footer h4 {
 
     footer div {
         margin-left: 10px;
-
     }
 
     footer {
@@ -822,11 +1026,15 @@ footer h4 {
     #diritti {
         padding-left: 0;
         padding-right: 0;
-
     }
 }
 
+/* MIN-WIDTH 1200px */
+
 @media (min-width:1200px) {
+    #bloccoheader {
+        width: 78%;
+    }
 
     #blog {
         padding-left: 0;
@@ -839,5 +1047,61 @@ footer h4 {
 
     .form1 {
         width: 50%;
+    }
+
+    #scorrifoto {
+        margin: auto;
+        width: 100%;
+    }
+
+    #scorrifoto i {
+        margin-right: 10%;
+    }
+
+    #scorrifoto h3 {
+        margin-left: 13%;
+        margin-top: 5%;
+    }
+
+    .slider-container {
+        width: 80%;
+        margin: auto;
+    }
+
+    .contenitore {
+        width: 100%;
+        margin: auto;
+    }
+
+    #slider-image-1:target~#picture {
+        left: 0px;
+    }
+
+    #slider-image-2:target~#picture {
+        left: -100%;
+    }
+
+    #buttonSlide4 {
+        display: none;
+    }
+
+    .form1 input {
+        min-width: 90%;
+    }
+
+    .form1 {
+        margin-left: 14%;
+        margin-left: 10%;
+    }
+
+    .slider-image {
+        min-width: 25%;
+        min-height: 25%;
+        padding: 22px;
+        margin: auto;
+    }
+
+    .change {
+        display: none;
     }
 }
