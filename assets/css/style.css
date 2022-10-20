@@ -82,6 +82,9 @@ input[type="checkbox"]:checked+#menu {
 
 #scorrifoto {
     margin: 50px 0px;
+}
+
+#scorrifoto {
     padding: 0 15px;
 }
 
@@ -93,59 +96,65 @@ span {
     color: #FF5333;
     font-size: 24px;
 }
-.slider-container{
-    width: 575px;
-    height: 390px;
-    padding:50px 15px;
+
+.slider-container {
+    width: 100%;
+    height: 250px;
+    padding: 25px 15px;
     overflow: hidden;
     text-align: center;
 }
+
 #picture {
-      width: 2184;  
-       height: 180px ;
-       display: flex;
-        margin-top: 30px;
-        margin-bottom: 50px;
-        text-align: center;
-        overflow: hidden;
-        position: relative;
-        -webkit-transition: left 2s;
-        -moz-transition: left 2s;
-        -o-transition: left 2s;
-        transition: left 2s;
+    width: 2184;
+    height: 180px;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+    transition: left 2s;
 }
-#slider-image-1:target ~ #picture{
-   left: 0px;
+
+#slider-image-1:target~#picture {
+    left: 0px;
 }
-#slider-image-2:target ~ #picture
-{
-   left: -546px;
+
+#slider-image-2:target~#picture {
+    left: -546px;
 }
-#slider-image-3:target ~ #picture
-{
-   left: -1092px;
+
+#slider-image-3:target~#picture {
+    left: -1092px;
 }
-#slider-image-4:target ~ #picture
-{
-   left: -1638px;
+
+#slider-image-4:target~#picture {
+    left: -1638px;
 }
+
 .slider-image {
-    width: 273px;
-    height: 220px;
+    min-width: 273px;
+    min-height: 220px;
 }
-.slider-change
-{
-	display: inline-block;
+
+.slider-change {
+    display: inline-block;
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color:#DADADA;
+    background-color: #DADADA;
 }
-.contenitore{
-    width: 546px;
+
+.contenitore {
+    width: 100%;
     overflow: hidden;
 
 }
+
 /* about us */
 
 #aboutus {
@@ -517,19 +526,22 @@ footer h4 {
     width: 40px;
     height: 40px;
 }
+
 /* ANIMATIONS */
-.post{
+.post {
     overflow: hidden;
 }
+
 .post img:hover {
     transform: rotate(10deg) scale(1.3);
-    transition:2s;
+    transition: 2s;
 }
-   .post img{
-    transition: transform 1s ease-in-out;
-   }
 
-    
+.post img {
+    transition: transform 1s ease-in-out;
+}
+
+
 
 
 /* MEDIA QUERIES */
@@ -558,15 +570,17 @@ footer h4 {
         margin-right: 20px;
     }
 
+
     #scorrifoto {
         margin: 50px 35px;
     }
 
-    #picture img {
+    .slider-image {
         margin-right: 25px;
         min-width: 315px;
         min-height: 243px;
     }
+
 
     h1 {
         font-size: 36px;
@@ -704,28 +718,33 @@ footer h4 {
 }
 
 @media screen and (min-width:992px) {
-    #bloccoheader{
+    #bloccoheader {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
 
-    #scorrifoto, #aboutus div, #containerblog, #listamenu, #news > div, #contatti > div, #containerfooter {
+    #picture,
+    #aboutus div,
+    #containerblog,
+    #listamenu,
+    #news>div,
+    #contatti>div,
+    #containerfooter {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
-
-    #picture img {
-        margin-right: 30px;
-        min-width: 185px;
-        min-height: 147.46px;
+   
+  
+    .slider-image {
+      
+        min-width: 187px;
+        min-height: 147px;
     }
 
-    #picture {
-        padding-left: 40px;
-        padding-right: 40px;
-
+    .change {
+        display: none;
     }
 
     #containerblog {
@@ -808,7 +827,7 @@ footer h4 {
 }
 
 @media (min-width:1200px) {
-  
+
     #blog {
         padding-left: 0;
         padding-right: 0;
