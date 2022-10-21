@@ -1,3 +1,4 @@
+/* GENERALE */
 @font-face {
     font-family: 'personalFont';
     src: local('personalFont'), url('../fonts/ufonts.com_tw-cen-mt.ttf') format('truetype');
@@ -64,6 +65,11 @@ input[type="checkbox"]:checked+#menu {
     list-style-type: none;
     margin-top: 15px;
 }
+#menu li:hover {
+    border-bottom: 2px solid #FF5333;
+}
+
+    
 
 #menu a:link,
 #menu a:hover,
@@ -708,12 +714,19 @@ footer h4 {
         align-items: baseline;
         height: 55px;
         margin-top: -85px;
-        width: 88%;
+        left: 4.2%;
+       width: 88%;
     }
 
     #menu {
         overflow: visible;
         display: flex;
+    }
+    #menu li:hover {
+        border-bottom: none;
+    }
+    #menu a:hover {
+        border-bottom: 2px solid #FF5333;
     }
 
     #menu li {
@@ -1036,6 +1049,10 @@ footer h4 {
         width: 78%;
     }
 
+    #bloccoheader img {
+        padding-left: 37px;
+    }
+
     #blog {
         padding-left: 0;
         padding-right: 0;
@@ -1062,6 +1079,7 @@ footer h4 {
         margin-left: 13%;
         margin-top: 5%;
     }
+
 
     .slider-container {
         width: 80%;
